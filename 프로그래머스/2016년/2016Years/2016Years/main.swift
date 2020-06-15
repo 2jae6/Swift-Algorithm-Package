@@ -8,8 +8,8 @@
 
 import Foundation
 
-var a = 1
-var b = 1
+var a = 5
+var b = 24
 
 var month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 var days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"]
