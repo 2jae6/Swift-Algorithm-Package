@@ -1,6 +1,5 @@
 # Swift-Algorithm-Package
 
-알고리즘 Swift 모음
 
 ## 배열
 
@@ -38,7 +37,7 @@
 
 </details>
 
-<details><summary>String 자른 후 String.Element?</summary>
+<details><summary>Str</summary>
 
 ~~~
 
@@ -46,7 +45,7 @@
 
 </details>
 
-<details><summary>SubString</summary>
+<details><summary>Str</summary>
 
 ~~~
 
@@ -87,6 +86,7 @@ var n = input[0]
 var k = input[1]
   ~~~
   </details>
+  
   <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   ~~~
  var nm: Array<String> = []
@@ -96,16 +96,16 @@ nm = readLine()!.components(separatedBy: " ")
 n = Int(nm[0])!
 m = Int(nm[1])!
   ~~~
-  </details>
+ </details>
     
      <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   ~~~
- var nm: Array<String> = []
-var n: Int
-var m: Int
-nm = readLine()!.components(separatedBy: " ")
-n = Int(nm[0])!
-m = Int(nm[1])!
+    var nm: Array<String> = []
+    var n: Int
+    var m: Int
+    nm = readLine()!.components(separatedBy: " ")
+    n = Int(nm[0])!
+    m = Int(nm[1])!
   ~~~
 
 </details>
