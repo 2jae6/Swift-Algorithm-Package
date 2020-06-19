@@ -86,6 +86,7 @@
 var n = input[0]
 var k = input[1]
   ~~~
+  </details>
   <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   ~~~
  var nm: Array<String> = []
@@ -95,6 +96,7 @@ nm = readLine()!.components(separatedBy: " ")
 n = Int(nm[0])!
 m = Int(nm[1])!
   ~~~
+  </details>
     
      <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   ~~~
@@ -105,3 +107,5 @@ nm = readLine()!.components(separatedBy: " ")
 n = Int(nm[0])!
 m = Int(nm[1])!
   ~~~
+
+</details>
