@@ -87,7 +87,7 @@ var k = input[1]
   ~~~
   </details>
   
-  <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
+ <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   ~~~
  var nm: Array<String> = []
 var n: Int
@@ -98,7 +98,7 @@ m = Int(nm[1])!
   ~~~
  </details>
     
-     <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
+ <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   ~~~
     var nm: Array<String> = []
     var n: Int
