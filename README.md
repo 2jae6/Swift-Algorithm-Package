@@ -54,17 +54,23 @@ var k = input[1]
  <details><summary>최대 공약수 찾기</summary>
   
   ~~~
-func gcd(_ n:Int, _ m:Int) -> Int {
-    
-    //최대 공약수 구하기
-    let r = n % m
-    if r != 0{
-        return solution(m, r)
-    }else{
-        print(m)
-        result.append(m)
-        return result
-    }
+func gcd(_ a: Int, _ b: Int) -> Int {
+  let r = a % b
+  if r != 0 {
+    return gcd(b, r)
+  } else {
+    return b
+  }
+}
+  ~~~
+
+</details>
+
+ <details><summary>최소 공배수 찾기</summary>
+  
+  ~~~
+func lcm(_ m: Int, _ n: Int) -> Int {
+  return m*n / gcd(m, n)
 }
   ~~~
 
