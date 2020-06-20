@@ -21,61 +21,7 @@
 
 </details>
 
-<details><summary>String 삭제</summary>
 
-~~~
-
-~~~
-
-</details>
-
-<details><summary>St</summary>
-
-~~~
-
-~~~
-
-</details>
-
-<details><summary>Str</summary>
-
-~~~
-
-~~~
-
-</details>
-
-<details><summary>Str</summary>
-
-~~~
-
-~~~
-
-</details>
-
-<details><summary>Str]r 문</summary>
-
-~~~
-
-~~~
-
-</details>
-
-<details><summary>Str</summary>
-
-~~~
-
-~~~
-
-</details>
-
-<details><summary>Stㄱ</summary>
-
-~~~
-
-~~~
-
-</details>
 
 ## 입력 받기
 
@@ -89,12 +35,6 @@ var k = input[1]
   
  </details>
   
- <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
-  
-  ~~~
-
-  ~~~
- </details>
     
  <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   
@@ -105,6 +45,27 @@ var k = input[1]
     nm = readLine()!.components(separatedBy: " ")
     n = Int(nm[0])!
     m = Int(nm[1])!
+  ~~~
+
+</details>
+
+## 잡다한 코드
+
+ <details><summary>최대 공약수 찾기</summary>
+  
+  ~~~
+func gcd(_ n:Int, _ m:Int) -> Int {
+    
+    //최대 공약수 구하기
+    let r = n % m
+    if r != 0{
+        return solution(m, r)
+    }else{
+        print(m)
+        result.append(m)
+        return result
+    }
+}
   ~~~
 
 </details>
