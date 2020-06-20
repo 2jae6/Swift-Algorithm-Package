@@ -10,26 +10,21 @@ import Foundation
 
 func solution(_ n:Int, _ m:Int) -> [Int] {
     
-    var nAk:Array<Int> = []
-    var mAk:Array<Int> = []
-    //최대 공약수 구하기
-    for i in 1 ... n{
-        if n % i == 0{
-            nAk.append(i)
-        }
-    }
-    for i in 1 ... m{
-        if m % i == 0{
-            mAk.append(i)
-        }
-    }
+    var result: Array<Int> = []
+    result.append(gcd(n, m))
+    result.append(n * m / gcd(n, m))
+    print(result)
+    return result
     
-    print(nAk)
-    print(mAk)
-
-    nAk.capacity
-    
-    // 최소 공배수 구하기
-    return []
 }
-solution(3, 12)
+
+solution(2, 5)
+
+func gcd(_ a: Int, _ b: Int) -> Int {
+  let r = a % b
+  if r != 0 {
+    return gcd(b, r)
+  } else {
+    return b
+  }
+}
