@@ -50,6 +50,15 @@ test.suffix(2) // "CD"
 
 ## 입력 받기
 
+ <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
+  
+  ~~~
+let n = readLine()!.components(separatedBy: [" "]).map { Int($0)! }
+let (a, b) = (n[0], n[1])
+  ~~~
+
+</details>
+
 <details><summary>한번에 두 개 변수에 정수를 입력 받기</summary>
   
   ~~~
