@@ -21,6 +21,17 @@
 
 </details>
 
+## Int
+<details><summary>자연수를 각 자리 별로 나누기 10 -> 1, 0</summary>
+
+~~~
+    let strNum = Array(String(x))
+    print(strNum)
+    let intNum = strNum.map{Int(String($0))!}
+    print(intNum)
+~~~
+
+</details>
 
 
 ## 입력 받기
