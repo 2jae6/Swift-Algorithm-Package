@@ -13,13 +13,26 @@
 
 ## String
 
-<details><summary>String 추가</summary>
+<details><summary>String 반복하기</summary>
 
 ~~~
-
+String(repeating: "A", count: 3)
+//A를 3번 반복
 ~~~
 
 </details>
+
+
+<details><summary>String 처음부터, 끝부터 일정 수만큼 가져오기</summary>
+
+~~~
+let test = "ABCD"
+test.prefix(2) // "AB"
+test.suffix(2) // "CD"
+~~~
+
+</details>
+
 
 ## Int
 <details><summary>자연수를 각 자리 별로 나누기 10 -> 1, 0</summary>
