@@ -3,10 +3,11 @@
 
 ## 배열
 
-<details><summary>범위 출력</summary>
+<details><summary>2차원 배열 초기화</summary>
 
 ~~~
-
+ var test: [[Int]] = Array(repeating: Array(repeating: 0, count: 3), count: 4)
+// 숫자 0 을 test[3][4] 만큼 만든다.    
 ~~~
 
 </details>
