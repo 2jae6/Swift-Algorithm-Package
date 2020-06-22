@@ -127,3 +127,13 @@ func lcm(_ m: Int, _ n: Int) -> Int {
   ~~~
 
 </details>
+
+ <details><summary>2진수 16진수 만들기</summary>
+  
+  ~~~
+  //radix의 수만 2나 16으로 바꿔주면 됌
+let a = 15
+let b = String(a, radix: 2)
+  ~~~
+
+</details>
