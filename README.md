@@ -21,6 +21,15 @@
 
 </details>
 
+<details><summary>모든 String 원소 String으로 합치기</summary>
+
+~~~
+//result 배열 c String
+ c = result.reduce("", +)
+~~~
+
+</details>
+
 ## String
 
 <details><summary>String 반복하기</summary>
