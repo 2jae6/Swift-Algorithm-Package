@@ -48,6 +48,3 @@ func solution(_ bridge_length:Int, _ weight:Int, _ truck_weights:[Int]) -> Int {
     return ingTimeTruck.last!
 }
 solution(2, 10, [7, 4, 5, 6])
-//solution(100, 10, [10])
-
-// 1~2: 7 / 3: 4 /  4: 4, 5 / 5: 5 /6~7 : 6 / 8: []
