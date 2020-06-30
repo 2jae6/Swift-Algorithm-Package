@@ -10,46 +10,44 @@ import Foundation
 
 func solution(_ bridge_length:Int, _ weight:Int, _ truck_weights:[Int]) -> Int {
     var time = 0
-   
-    //다리에 올라간 트럭들
+    
+    var sumW = 0
+    
+    //다리에 올라간 트럭들 무게
     var ingBridgeTruck: Array<Int> = []
+    
     //트럭이 올라간 시간
     var ingTimeTruck: Array<Int> = []
+    
     //대기중인 트럭
-    var truck_weights = truck_weights
-   
-    while !truck_weights.isEmpty{
-      
-  //다리에 트럭을 올리고 내리고를 구현해라
-        time += 1
+    var copy_Truck_weights = truck_weights
+    
+    
+    
+    while !copy_Truck_weights.isEmpty{
         
-        if weight >= truck_weights.first! + ingBridgeTruck.reduce(0, +){
-            if ingBridgeTruck.first == truck_weights.first{
-                ingBridgeTruck.append(truck_weights[1])
-            }else{
-                ingBridgeTruck.append(truck_weights.first!)
+        time += 1
+        if !ingTimeTruck.isEmpty{
+            if time == ingTimeTruck.first!{
+                ingTimeTruck.removeFirst()
+                sumW -= ingBridgeTruck.first!
+                ingBridgeTruck.removeFirst()
                 
             }
-            ingTimeTruck.append(0)
-            
         }
         
-       ingTimeTruck = ingTimeTruck.map{$0 + 1}
-        
-        if ingTimeTruck.first == bridge_length{
-            ingBridgeTruck.removeFirst()
-            ingTimeTruck.removeFirst()
-            truck_weights.removeFirst()
+        if weight >= copy_Truck_weights.first! + sumW{
+            sumW += copy_Truck_weights.first!
+            ingBridgeTruck.append(copy_Truck_weights.first!)
+            ingTimeTruck.append(time + bridge_length)
+            copy_Truck_weights.removeFirst()
         }
-        print(time)
-        print(ingBridgeTruck)
-        print(ingTimeTruck)
     }
-
     
-    print(time)
-    return time
+    
+    return ingTimeTruck.last!
 }
 solution(2, 10, [7, 4, 5, 6])
 //solution(100, 10, [10])
 
+// 1~2: 7 / 3: 4 /  4: 4, 5 / 5: 5 /6~7 : 6 / 8: []
