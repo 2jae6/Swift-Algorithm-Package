@@ -30,6 +30,18 @@
 
 </details>
 
+<details><summary>2차원 배열에서 한 인덱스를 기준으로 뽑기</summary>
+
+~~~
+    for i in 0 ..< clothes.count{
+        let key = clothes[i][1]
+        let valueCount = kind[key] ?? 1
+        kind[key] = valueCount + 1
+    }
+~~~
+
+</details>
+
 ## String
 
 <details><summary>String 반복하기</summary>
