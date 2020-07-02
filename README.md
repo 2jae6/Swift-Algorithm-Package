@@ -42,6 +42,14 @@
 
 </details>
 
+<details><summary>배열 중복 제거</summary>
+
+~~~
+   print(Array(Set(sortArr)))
+~~~
+
+</details>
+
 ## String
 
 <details><summary>String 반복하기</summary>
