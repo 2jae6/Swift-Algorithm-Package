@@ -8,13 +8,12 @@
 
 import Foundation
 
-var a = 5
-var b = 24
-
-var month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-var days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"]
-
-
-var num = month.prefix(a).reduce(0, +) + (b)
-print(days[num % 7])
-
+func solution(_ a:Int, _ b:Int) -> String {
+    
+    var a = a
+    var b = b
+    var month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    var days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"]
+    var num = month.prefix(a).reduce(0, +) + (b)
+    return days[num % 7]
+}
