@@ -95,7 +95,17 @@ extension String{
 
 </details>
 
+<details><summary>String 처음부터 특정 갯수</summary>
 
+~~~
+    while !s.isEmpty{
+        let a = String(s.prefix(2))
+        sArray.append(a)
+        s.removeFirst(2)
+    }
+~~~
+
+</details>
 ## Int
 <details><summary>자연수를 각 자리 별로 나누기 10 -> 1, 0</summary>
 
