@@ -50,6 +50,34 @@
 
 </details>
 
+<details><summary>배열 중복제거 확장</summary>
+
+~~~
+  extension Array where Element:Equatable {
+    func removeDuplicates() -> [Element] {
+        var result = [Element]()
+
+        for value in self {
+            if result.contains(value) == false {
+                result.append(value)
+            }
+        }
+
+        return result
+    }
+}
+~~~
+
+</details>
+
+<details><summary>두개의 배열 중 겹치는 것 </summary>
+
+~~~
+let arr1 = array1.filter{!array2.contains($0)}
+~~~
+
+</details>
+
 ## String
 
 <details><summary>String 반복하기</summary>
@@ -106,7 +134,9 @@ extension String{
 ~~~
 
 </details>
+
 ## Int
+
 <details><summary>자연수를 각 자리 별로 나누기 10 -> 1, 0</summary>
 
 ~~~
