@@ -10,62 +10,77 @@ import Foundation
 
 func solution(_ s:String) -> Int {
     
-     
     
+    var resultString = s
     
-    var resultCount = 0
-    
-    for z in 1 ..< s.count / 2{
-
-        var sString = s
-        var sArray:Array<String> = []
-        //글자를 특정 수만큼 자르기
-        while !sString.isEmpty{
-            let a = String(sString.prefix(z))
-            sArray.append(a)
-            sString.removeFirst(z)
-        }
-        print(sArray)
-        
-        var prev = ""
-        var count = 0
-        var lastString: Array<String> = []
-        for i in 0 ..< sArray.count{
-            if prev == ""{
-                prev = sArray[i]
-                count += 1
-            }else{
-                if prev == sArray[i]{
-                    count += 1
-                }else{
-                    
-                    if count == 1{
-                        lastString.append("\(prev)")
-                    }else{
-                        lastString.append("\(count)\(prev)")
-                    }
-                    
-                    prev = sArray[i]
-                    count = 1
-                }
-            }
-        }
-        if count == 1{
-            lastString.append("\(prev)")
-        }else{
-            lastString.append("\(count)\(prev)")
-        }
-        
-        //print(lastString)
-        var result = lastString.joined()
-        print(result)
-        if result.count > resultCount{
-            resultCount = result.count
-        }
+    if s.count == 1{
+        return 1
     }
     
-    print(resultCount)
-    return 0
+    
+    for i in 1 ... s.count / 2{
+        var s = s
+        var splitS:Array<String> = []
+        //문자열 자르기
+        while !s.isEmpty{
+            let a = String(s.prefix(i))
+            splitS.append(a)
+            
+            if s.count < i{
+                s.removeAll()
+            }else{
+                s.removeFirst(i)
+            }
+            
+        }
+        
+        
+        
+        //문자열 압축하기
+        var prev = ""
+        var word = ""
+        var count = 1
+        for z in 0 ..< splitS.count{
+            if prev == ""{
+                prev = splitS[0]
+            }else{
+                if prev == splitS[z]{
+                    count += 1
+                }else{
+                    if count == 1{
+                        word.append("\(prev)")
+                        
+                    }else{
+                        word.append("\(count)\(prev)")
+                        
+                    }
+                    prev = splitS[z]
+                    count = 1
+                }
+                
+            }
+            
+        }
+        
+        if count == 1{
+            word.append("\(prev)")
+            
+        }else{
+            word.append("\(count)\(prev)")
+            
+        }
+        
+        
+        
+        if word.count < resultString.count{
+            resultString = word
+        }
+        
+    }
+    
+    //문자열 중 가장 짧게 축약된 문자열의 길이
+    return resultString.count
 }
 //2a2ba3c
-solution("abcabcabcabcdededededede")
+
+solution("abcabcdede")
