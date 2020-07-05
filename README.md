@@ -42,7 +42,7 @@
 
 </details>
 
-<details><summary>배열 중복 제거</summary>
+<details><summary>Set으로 쉽게 배열 중복 제거</summary>
 
 ~~~
    print(Array(Set(sortArr)))
@@ -50,7 +50,7 @@
 
 </details>
 
-<details><summary>배열 중복제거 확장</summary>
+<details><summary>Set을 사용하지 않고 배열 중복제거 확장</summary>
 
 ~~~
   extension Array where Element:Equatable {
@@ -123,14 +123,20 @@ extension String{
 
 </details>
 
-<details><summary>String 처음부터 특정 갯수</summary>
+<details><summary>String 처음부터 특정 갯수 나누기</summary>
 
 ~~~
-    while !s.isEmpty{
-        let a = String(s.prefix(2))
-        sArray.append(a)
-        s.removeFirst(2)
-    }
+          while !s.isEmpty{
+            let a = String(s.prefix(i))
+            splitS.append(a)
+            
+            if s.count < i{
+                s.removeAll()
+            }else{
+                s.removeFirst(i)
+            }
+            
+        }
 ~~~
 
 </details>
