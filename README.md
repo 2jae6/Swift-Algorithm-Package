@@ -113,6 +113,22 @@ let arr1 = array1.filter{!array2.contains($0)}
 
 </details>
 
+<details><summary>콤비네이션 구하기 함수 </summary>
+
+~~~
+func combinations(_ array: [Character]) -> [String] {
+    if array.count == 0 { return [] }
+
+    return (0..<array.count).flatMap { i -> [String] in
+        var removedArray = array
+        let elem = String(removedArray.remove(at: i))
+        return [elem] + combinations(removedArray).map { elem + $0 }
+    }
+}
+~~~
+
+</details>
+
 ## String
 
 <details><summary>String 반복하기</summary>
