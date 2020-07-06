@@ -261,3 +261,23 @@ let b = String(a, radix: 2)
   ~~~
 
 </details>
+
+ <details><summary>소수 찾기</summary>
+  
+  ~~~
+   var suso: Array<Int> = []
+    var arr = Array.init(repeating: false, count: bigNum + 1)
+    var count = 0
+    for i in 2 ... bigNum{
+        if arr[i] == false{
+            count += 1
+            suso.append(i)
+            for j in stride(from: i, to: bigNum + 1, by: i){
+                arr[j] = true
+            }
+        }
+        
+    }
+  ~~~
+
+</details>
