@@ -70,6 +70,41 @@
 
 </details>
 
+<details><summary>조합구하기 ab와 ba 같은</summary>
+
+~~~
+ func allPossibleCombinations() -> [[Element]] {
+    var output: [[Element]] = [[]]
+    for groupSize in 1...self.count {
+        for (index1, item1) in self.enumerated() {
+            var group = [item1]
+            for (index2, item2) in self.enumerated() {
+                if group.count < groupSize {
+                    if index2 > index1 {
+                        group.append(item2)
+                        if group.count == groupSize {
+                            output.append(group)
+                            group = [item1]
+                            continue
+                        }
+                    }
+                } else {
+                    break
+                }
+            }
+            if group.count == groupSize {
+                output.append(group)
+            }
+        }
+    }
+    return output
+}
+
+}
+~~~
+
+</details>
+
 <details><summary>두개의 배열 중 겹치는 것 </summary>
 
 ~~~
