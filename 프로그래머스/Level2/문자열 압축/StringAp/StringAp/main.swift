@@ -78,9 +78,7 @@ func solution(_ s:String) -> Int {
         
     }
     
-    //문자열 중 가장 짧게 축약된 문자열의 길이
     return resultString.count
 }
-//2a2ba3c
 
 solution("abcabcdede")

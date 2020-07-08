@@ -16,8 +16,10 @@ func solution(_ clothes:[[String]]) -> Int {
         let valueCount = kind[key] ?? 1
         kind[key] = valueCount + 1
     }
-   
-   // print(kind.reduce(1){$0 * $1.value} - 1)
+    
+    
+    print(kind)
+    print(kind.reduce(1){$0 * $1.value} - 1)
     return kind.reduce(1){$0 * $1.value} - 1
 }
 
