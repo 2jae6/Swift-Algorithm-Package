@@ -129,6 +129,22 @@ func combinations(_ array: [Character]) -> [String] {
 
 </details>
 
+<details><summary>가운데 인덱스 가져오기 </summary>
+
+~~~
+  if countArray.count % 2 == 0{
+      let mid1 = countArray.index(countArray.startIndex, offsetBy: countArray.count / 2)
+      let mid2 = countArray.index(countArray.startIndex, offsetBy: (countArray.count / 2) - 1)
+      result.append(countArray[mid1])
+      result.append(countArray[mid2])
+  }else{
+      let mid = countArray.index(countArray.startIndex, offsetBy: countArray.count / 2)
+      result.append(countArray[mid])
+  }
+~~~
+
+</details>
+
 ## String
 
 <details><summary>String 반복하기</summary>
