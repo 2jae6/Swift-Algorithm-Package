@@ -42,7 +42,7 @@
 
 </details>
 
-<details><summary>배열 중복 제거</summary>
+<details><summary>Set으로 쉽게 배열 중복 제거</summary>
 
 ~~~
    print(Array(Set(sortArr)))
@@ -50,7 +50,7 @@
 
 </details>
 
-<details><summary>배열 중복제거 확장</summary>
+<details><summary>Set을 사용하지 않고 배열 중복제거 확장</summary>
 
 ~~~
   extension Array where Element:Equatable {
@@ -70,10 +70,61 @@
 
 </details>
 
+<details><summary>조합구하기 ab와 ba 같은</summary>
+
+~~~
+ func allPossibleCombinations() -> [[Element]] {
+    var output: [[Element]] = [[]]
+    for groupSize in 1...self.count {
+        for (index1, item1) in self.enumerated() {
+            var group = [item1]
+            for (index2, item2) in self.enumerated() {
+                if group.count < groupSize {
+                    if index2 > index1 {
+                        group.append(item2)
+                        if group.count == groupSize {
+                            output.append(group)
+                            group = [item1]
+                            continue
+                        }
+                    }
+                } else {
+                    break
+                }
+            }
+            if group.count == groupSize {
+                output.append(group)
+            }
+        }
+    }
+    return output
+}
+
+}
+~~~
+
+</details>
+
 <details><summary>두개의 배열 중 겹치는 것 </summary>
 
 ~~~
 let arr1 = array1.filter{!array2.contains($0)}
+~~~
+
+</details>
+
+<details><summary>콤비네이션 구하기 함수 </summary>
+
+~~~
+func combinations(_ array: [Character]) -> [String] {
+    if array.count == 0 { return [] }
+
+    return (0..<array.count).flatMap { i -> [String] in
+        var removedArray = array
+        let elem = String(removedArray.remove(at: i))
+        return [elem] + combinations(removedArray).map { elem + $0 }
+    }
+}
 ~~~
 
 </details>
@@ -123,14 +174,20 @@ extension String{
 
 </details>
 
-<details><summary>String 처음부터 특정 갯수</summary>
+<details><summary>String 처음부터 특정 갯수 나누기</summary>
 
 ~~~
-    while !s.isEmpty{
-        let a = String(s.prefix(2))
-        sArray.append(a)
-        s.removeFirst(2)
-    }
+          while !s.isEmpty{
+            let a = String(s.prefix(i))
+            splitS.append(a)
+            
+            if s.count < i{
+                s.removeAll()
+            }else{
+                s.removeFirst(i)
+            }
+            
+        }
 ~~~
 
 </details>
@@ -217,6 +274,26 @@ func lcm(_ m: Int, _ n: Int) -> Int {
   //radix의 수만 2나 16으로 바꿔주면 됌
 let a = 15
 let b = String(a, radix: 2)
+  ~~~
+
+</details>
+
+ <details><summary>소수 찾기</summary>
+  
+  ~~~
+   var suso: Array<Int> = []
+    var arr = Array.init(repeating: false, count: bigNum + 1)
+    var count = 0
+    for i in 2 ... bigNum{
+        if arr[i] == false{
+            count += 1
+            suso.append(i)
+            for j in stride(from: i, to: bigNum + 1, by: i){
+                arr[j] = true
+            }
+        }
+        
+    }
   ~~~
 
 </details>
