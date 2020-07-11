@@ -21,7 +21,8 @@ func solution(_ clothes:[[String]]) -> Int {
     print(kind)
     print(kind.reduce(1){$0 * $1.value} - 1)
     return kind.reduce(1){$0 * $1.value} - 1
+    // (n+1) * (m + 1) - 1
 }
-
+// map / filter / reduce
 solution([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]])
 

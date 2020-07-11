@@ -14,6 +14,11 @@ func solution(_ a:Int, _ b:Int) -> String {
     var b = b
     var month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     var days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"]
+    
     var num = month.prefix(a).reduce(0, +) + (b)
+    
+    
+    
     return days[num % 7]
 }
+solution(7, 11)
