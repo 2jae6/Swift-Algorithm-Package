@@ -13,9 +13,7 @@ func solution(_ heights:[Int]) -> [Int] {
     
     for i in stride(from: heights.count - 1, to: -1, by: -1){
         var copy_heights = heights[0..<i]
-        //  print(heights[i])
-        
-        //높은 탑이 있나 찾기
+ 
         while !copy_heights.isEmpty {
             if heights[i] < copy_heights.last!{
                 print(copy_heights.count)
@@ -35,5 +33,5 @@ func solution(_ heights:[Int]) -> [Int] {
     print(result)
     return result
 }
-// 00224
+
 solution([6, 9, 5, 7, 4])

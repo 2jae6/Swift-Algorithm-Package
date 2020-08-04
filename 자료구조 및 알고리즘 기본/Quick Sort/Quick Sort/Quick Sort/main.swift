@@ -11,7 +11,7 @@ import Foundation
 let sampleArray = [4, 7, 9, 2, 3, 5, 6, 1, 8]
 
 func quickSort(array: [Int]) -> [Int] {
-    print(array)
+    
     if array.count < 2 { // 배열이 비어있거나 하나만 있는 경우는 이미 '정렬'
         return array
     } else {
@@ -24,3 +24,6 @@ func quickSort(array: [Int]) -> [Int] {
 }
 
 print(quickSort(array: sampleArray))
+// [4, 7, 9, 2, 3, 5, 6, 1, 8]
+// [2, 1, 3], [4], [7, 9, 6, 5, 8]
+// [1], [2, 3], [4], [6, 5], [7], [9, 8] 

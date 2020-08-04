@@ -17,7 +17,6 @@ if a.count % 2 == 0{
     b.append(a[c])
     b.append(a[d])
 }else{
-    
     let c = a.index(a.startIndex, offsetBy: a.count / 2)
     b.append(a[c])
 }
