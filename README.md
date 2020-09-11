@@ -313,3 +313,10 @@ let b = String(a, radix: 2)
   ~~~
 
 </details>
+ <details><summary>2진수로 바꾸고 0말고 1의 갯수 찾는 것</summary>
+  
+  ~~~
+print(n.nonzeroBitCount)
+  ~~~
+
+</details>
