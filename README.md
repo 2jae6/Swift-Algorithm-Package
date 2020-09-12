@@ -324,7 +324,7 @@ print(n.nonzeroBitCount)
 
 ## 확장
 
- <details><summary>이진탐색</summary>
+ <details><summary>Upper&LowerBound</summary>
   
   ~~~
 extension Array where Element: Comparable {
