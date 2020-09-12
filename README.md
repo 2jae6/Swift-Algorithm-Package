@@ -320,3 +320,46 @@ print(n.nonzeroBitCount)
   ~~~
 
 </details>
+
+
+## 확장
+
+ <details><summary>이진탐색</summary>
+  
+  ~~~
+extension Array where Element: Comparable {
+    func lowerBound(of element: Element) -> Int {
+        var left = startIndex
+        var right = count
+
+        while left < right {
+            let mid = (left+right)/2
+
+            if self[mid] >= element {
+                right = mid
+            } else {
+                left = mid+1
+            }
+        }
+
+        return right
+    }
+
+    func upperBound(of element: Element) -> Int {
+        var left = startIndex
+        var right = count
+
+        while left < right {
+            let mid = (left+right)/2
+
+            if self[mid] <= element {
+                left = mid+1
+            } else { right = mid }
+        }
+
+        return right
+    }
+}
+  ~~~
+
+</details>
